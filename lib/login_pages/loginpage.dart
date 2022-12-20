@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nepselogin/login_pages/password_reset.dart';
 import 'package:nepselogin/widgets/custom_widgets.dart';
+import 'package:nepselogin/widgets/text_widget.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -164,31 +165,14 @@ class LoginPage extends StatelessWidget {
                                 height: 1.5,
                               ),
                             ),
-                            Text(
-                              "* Don't save your password",
-                              style: GoogleFonts.roboto(
-                                fontSize: 16,
-                                color: Colors.black87,
-                                fontWeight: FontWeight.w300,
-                                height: 1.5,
-                              ),
-                            ),
-                            Text(
-                              "* Don't share your login credentials",
-                              style: GoogleFonts.roboto(
-                                fontSize: 16,
-                                color: Colors.black87,
-                                fontWeight: FontWeight.w300,
-                              ),
-                            ),
-                            Text(
-                              "* Logout the application before closing",
-                              style: GoogleFonts.roboto(
-                                fontSize: 16,
-                                color: Colors.black87,
-                                fontWeight: FontWeight.w300,
-                              ),
-                            ),
+                            const CustomTextField(
+                                textHere: "* Don't save your password"),
+                            const CustomTextField(
+                                textHere:
+                                    "* Don't share your login credentials"),
+                            const CustomTextField(
+                                textHere:
+                                    "* Logout the application before closing"),
                           ],
                         )
                       ],
